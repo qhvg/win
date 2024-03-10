@@ -11,55 +11,54 @@ mode con: cols=96 lines=36
 :main
 cls
 echo.
-echo [A] Windows Hacks
+echo [A] Microsoft Activation Scripts
 echo [B] Software
+echo [C] Registry Fixes/Hacks
 echo.
-echo [C] Exit
-echo.
-
-choice /c:abc /t 30 /d c
-
-if %errorlevel% == 1 goto hacks
-if %errorlevel% == 2 goto software
-if %errorlevel% == 3 goto exit
-
-rem ==============================================
-rem WINDOWS HACKS
-rem ==============================================
-
-:hacks
-cls
-echo.
-echo [A] Microsoft Activation Scripts (Win10+ only.)
-echo 	massgrave.dev for more info.
-echo [B] FolderType Registry Fix
-echo 	Changes FolderType to "NotSpecified", improves disk performance.
-echo.
-echo [C] Go back to main
 echo [D] Exit
 echo.
 
-choice /c:abcdef
+choice /c:abcd
 
 if %errorlevel% == 1 goto mas
-if %errorlevel% == 2 goto foldertype
-if %errorlevel% == 3 goto main
+if %errorlevel% == 2 goto software
+if %errorlevel% == 3 goto registry
 if %errorlevel% == 4 goto exit
-echo Done!
-pause
-goto hacks
+
+rem ==============================================
+rem MICROSOFT ACTIVATION SCRIPTS
+rem ==============================================
 
 :mas
 curl https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS/All-In-One-Version/MAS_AIO-CRC32_9AE8AFBA.cmd --output MAS.cmd
 call MAS.cmd
 pause
 del MAS.cmd
-goto hacks
+goto main
+
+rem ==============================================
+rem REGISTRY HACKS
+rem ==============================================
+
+:registry
+echo.
+echo [A] FolderType Registry Fix
+echo 	Changes FolderType to "NotSpecified", improves disk performance.
+echo.
+echo [B] Return to menu
+echo [C] Exit
+echo.
+
+choice /c:abc
+
+if %errorlevel% == 1 goto foldertype
+if %errorlevel% == 2 goto main
+if %errorlevel% == 3 goto exit
 
 :foldertype
 reg add "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
 pause
-goto hacks
+goto registry
 
 rem ==============================================
 rem WINDOWS SOFTWARE
@@ -72,7 +71,7 @@ echo [A] A - Editing Software
 echo [B] B - Tech Stuff
 echo [C] C - Miscellaneous
 echo.
-echo [D] Go back to main
+echo [D] Return to menu
 echo [E] Exit
 echo.
 
@@ -108,8 +107,8 @@ echo [H] Adobe Photoshop 2023 24.6.0.573 + Firefly (4.1 GiB) [7z]
 echo [I] Adobe Premiere Pro 2022 (1.9 GiB) [iso]
 echo [J] Adobe Premiere Pro 2023 23.4.0.56 (2.0 GiB) [iso]
 echo.
-echo [K] Go back to Software
-echo [L] Go back to main
+echo [K] Return to Software
+echo [L] Return to menu
 echo [M] Exit
 echo.
 
@@ -153,8 +152,8 @@ echo 	Bootable Linux USB drives.
 echo [G] BootData
 echo [H] FileShredder
 echo.
-echo [I] Go back to Software
-echo [J] Go back to main
+echo [I] Return to Software
+echo [J] Return to menu
 echo [K] Exit
 echo.
 
@@ -180,8 +179,8 @@ cls
 echo.
 echo [A] Firefox 123.0.1 x86 pl-PL Online Installer
 echo.
-echo [B] Go back to Software
-echo [C] Go back to main
+echo [B] Return to Software
+echo [C] Return to menu
 echo [D] Exit
 echo.
 
