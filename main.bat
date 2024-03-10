@@ -180,7 +180,7 @@ cls
 echo.
 echo [A] Firefox 123.0.1 x86 pl-PL Online Installer
 echo [B] Winaero Tweaker Installer
-echo   Larger list of registry tweaks.
+echo 	Larger list of registry tweaks.
 echo.
 echo [C] Return to Software
 echo [D] Return to menu
