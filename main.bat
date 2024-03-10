@@ -41,6 +41,7 @@ rem REGISTRY HACKS
 rem ==============================================
 
 :registry
+cls
 echo.
 echo [A] FolderType Registry Fix
 echo 	Changes FolderType to "NotSpecified", improves disk performance.
