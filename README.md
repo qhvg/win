@@ -1,6 +1,6 @@
 [Go to repository](https://github.com/qhvg/win)
 ## qhvg/win
-Batch script I made just in case I would have to set-up a new Windows 10 install.
+Batch script I made just in case I would have to setup a new Windows 10 install.
 
 ## Features
 
