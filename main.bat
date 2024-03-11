@@ -64,6 +64,7 @@ goto registry
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "PaintDesktopVersion" /t REG_DWORD /d 1
 taskkill /f /im explorer.exe
 call explorer
+goto registry
 
 rem ==============================================
 rem WINDOWS SOFTWARE
