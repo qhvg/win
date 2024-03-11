@@ -44,7 +44,7 @@ rem ==============================================
 cls
 echo.
 echo [A] FolderType Registry Fix - Changes FolderType to "NotSpecified", improves disk performance.
-echo [B] Verbose Logon Messages (Administrator privileges on %logonserver%\%username% required)
+echo [B] Verbose Logon Messages (Admin privileges on %logonserver%\%username% required)
 echo.
 echo [C] Return to menu
 echo [D] Exit
@@ -63,7 +63,7 @@ pause
 goto registry
 
 :verboselogon
-runas /user:%username% "reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v VerboseStatus /t REG_DWORD /d 1"
+runas /user:%username% "reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System /v VerboseStatus /t REG_DWORD /d 1"
 pause
 goto registry
 
