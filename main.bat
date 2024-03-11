@@ -1,5 +1,7 @@
 @echo off
 
+title qhvg/win
+
 rem https://github.com/qhvg/windows
 
 rem ==============================================
