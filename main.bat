@@ -43,8 +43,7 @@ rem ==============================================
 :registry
 cls
 echo.
-echo [A] FolderType Registry Fix
-echo 	Changes FolderType to "NotSpecified", improves disk performance.
+echo [A] FolderType Registry Fix - Changes FolderType to "NotSpecified", improves disk performance.
 echo.
 echo [B] Return to menu
 echo [C] Exit
@@ -70,19 +69,17 @@ cls
 echo.
 echo [A] A - Editing Software
 echo [B] B - Tech Stuff
-echo [C] C - Miscellaneous
 echo.
-echo [D] Return to menu
-echo [E] Exit
+echo [C] Return to menu
+echo [D] Exit
 echo.
 
 choice /c:abcde
 
 if %errorlevel% == 1 goto software_a
 if %errorlevel% == 2 goto software_b
-if %errorlevel% == 3 goto software_c
-if %errorlevel% == 4 goto main
-if %errorlevel% == 5 goto exit
+if %errorlevel% == 3 goto main
+if %errorlevel% == 4 goto exit
 
 rem ==============================================
 rem WINDOWS SOFTWARE SUBCATEGORIES
@@ -174,29 +171,6 @@ if %errorlevel% == 11 goto exit
 echo Done!
 pause
 goto software_b
-
-:software_c
-cls
-echo.
-echo [A] Firefox 123.0.1 x64 en-US Offline Installer
-echo [B] Winaero Tweaker Installer
-echo 	Larger list of registry tweaks.
-echo.
-echo [C] Return to Software
-echo [D] Return to menu
-echo [E] Exit
-echo.
-
-choice /c:ABCDE
-
-if %errorlevel% == 1 curl https://ftp.mozilla.org/pub/firefox/releases/123.0.1/win32/en-US/Firefox%20Setup%20123.0.1.exe --output "Firefox Setup 123.0.1.exe"
-if %errorlevel% == 2 curl https://winaerotweaker.com/download/winaerotweaker.zip --output winaerotweaker.zip
-if %errorlevel% == 3 goto software
-if %errorlevel% == 4 goto main
-if %errorlevel% == 5 goto exit
-echo Done!
-pause
-goto software_c
 
 :exit
 cls
