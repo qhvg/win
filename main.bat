@@ -178,7 +178,7 @@ goto software_b
 :software_c
 cls
 echo.
-echo [A] Firefox 123.0.1 x86 pl-PL Online Installer
+echo [A] Firefox 123.0.1 x64 en-US Offline Installer
 echo [B] Winaero Tweaker Installer
 echo 	Larger list of registry tweaks.
 echo.
@@ -189,7 +189,7 @@ echo.
 
 choice /c:ABCDE
 
-if %errorlevel% == 1 curl https://download-installer.cdn.mozilla.net/pub/firefox/releases/123.0.1/win32/pl/Firefox%20Installer.exe --output "Firefox Installer.exe"
+if %errorlevel% == 1 curl https://ftp.mozilla.org/pub/firefox/releases/123.0.1/win32/en-US/Firefox%20Setup%20123.0.1.exe --output "Firefox Setup 123.0.1.exe"
 if %errorlevel% == 2 curl https://winaerotweaker.com/download/winaerotweaker.zip --output winaerotweaker.zip
 if %errorlevel% == 3 goto software
 if %errorlevel% == 4 goto main
