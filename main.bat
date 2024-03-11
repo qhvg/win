@@ -28,6 +28,9 @@ if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
 if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output winaerotweaker.zip
 if %errorlevel% == 5 goto exit
+echo Done!
+pause
+goto main
 
 rem ==============================================
 rem MICROSOFT ACTIVATION SCRIPTS
