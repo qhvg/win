@@ -44,21 +44,26 @@ rem ==============================================
 cls
 echo.
 echo [A] FolderType Registry Fix - Changes FolderType to "NotSpecified", improves disk performance.
+echo [B] Show Windows version on Desktop (will restart Explorer shell)
 echo.
-echo [B] Return to menu
-echo [C] Exit
+echo [C] Return to menu
+echo [D] Exit
 echo.
 
 choice /c:abcd
 
-if %errorlevel% == 1 goto foldertype
-if %errorlevel% == 2 goto main
-if %errorlevel% == 3 goto exit
-
-:foldertype
-reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
+if %errorlevel% == 1 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
+if %errorlevel% == 2 goto showwinver
+if %errorlevel% == 3 goto main
+if %errorlevel% == 4 goto exit
+echo Done!
 pause
 goto registry
+
+:showwinver
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "PaintDesktopVersion" /t REG_DWORD /d 1
+taskkill /f /im explorer.exe
+explorer
 
 rem ==============================================
 rem WINDOWS SOFTWARE
