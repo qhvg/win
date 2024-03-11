@@ -14,16 +14,18 @@ echo.
 echo [A] Microsoft Activation Scripts
 echo [B] Software
 echo [C] Registry Fixes/Hacks
+echo [D] Download Winaero Tweaker
 echo.
-echo [D] Exit
+echo [E] Exit
 echo.
 
-choice /c:abcd
+choice /c:abcde
 
 if %errorlevel% == 1 goto mas
 if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
-if %errorlevel% == 4 goto exit
+if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output winaerotweaker.zip
+if %errorlevel% == 5 goto exit
 
 rem ==============================================
 rem MICROSOFT ACTIVATION SCRIPTS
