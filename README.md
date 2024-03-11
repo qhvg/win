@@ -16,7 +16,7 @@ Batch script I made just in case I would have to setup a new Windows 10 install.
 
 More stuff will be added later.
 
-**Files will be downloaded to current directory (ex. if you run the script at `C:\Users\Administrator\Desktop`, the files will be downloaded there). Same goes to the script itself, when using the Powershell method.**
+**Files will be downloaded to current directory (ex. if you run the script at `C:\Users\Administrator\Desktop`, the files will be downloaded there). Same goes to the script itself when using the Powershell method.**
 
 ## How to run?
 ### Method 1 - Powershell
