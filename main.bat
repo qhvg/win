@@ -46,15 +46,16 @@ echo.
 echo [A] FolderType Registry Fix - Changes FolderType to "NotSpecified", improves disk performance.
 echo [B] Verbose Logon Messages (Administrator privileges on %logonserver%\%username% required)
 echo.
-echo [B] Return to menu
-echo [C] Exit
+echo [C] Return to menu
+echo [D] Exit
 echo.
 
-choice /c:abc
+choice /c:abcd
 
 if %errorlevel% == 1 goto foldertype
-if %errorlevel% == 2 goto main
-if %errorlevel% == 3 goto exit
+if %errorlevel% == 2 goto verboselogon
+if %errorlevel% == 3 goto main
+if %errorlevel% == 4 goto exit
 
 :foldertype
 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
