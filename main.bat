@@ -2,6 +2,8 @@
 
 title qhvg/win
 
+set DownloadPath="%userprofile%\Downloads"
+
 rem https://github.com/qhvg/windows
 
 rem ==============================================
@@ -26,7 +28,7 @@ choice /c:abcde
 if %errorlevel% == 1 goto mas
 if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
-if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output winaerotweaker.zip
+if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output %DownloadPath%\winaerotweaker.zip
 if %errorlevel% == 5 goto exit
 echo Done!
 pause
@@ -125,16 +127,16 @@ echo.
 
 choice /c:ABCDEFGHIJKLM
 
-if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro20.7z --output VEGASPro20.7z
-if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro16.7z --output VEGASPro16.7z
-if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro21-Suite.7z --output VEGASPro21-Suite.7z
-if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro8.7z --output VEGASPro8.7z
-if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2022.iso --output AfterEffects2022.iso
-if %errorlevel% == 6 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2023-23.4.0.53.iso --output AfterEffects2023-23.4.0.53.iso
-if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2022.iso --output Photoshop2022.iso
-if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2023-24.6.0.573%2BFireflyAI.7z --output Photoshop2023-24.6.0.573%2BFireflyAI.7z
-if %errorlevel% == 9 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2022.iso --output PremierePro2022.iso
-if %errorlevel% == 10 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2023-23.4.0.56.iso --output PremierePro2023-23.4.0.56.iso
+if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro20.7z --output %DownloadPath%\VEGASPro20.7z
+if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro16.7z --output %DownloadPath%\VEGASPro16.7z
+if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro21-Suite.7z --output %DownloadPath%\VEGASPro21-Suite.7z
+if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro8.7z --output %DownloadPath%\VEGASPro8.7z
+if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2022.iso --output %DownloadPath%\AfterEffects2022.iso
+if %errorlevel% == 6 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2023-23.4.0.53.iso --output %DownloadPath%\AfterEffects2023-23.4.0.53.iso
+if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2022.iso --output %DownloadPath%\Photoshop2022.iso
+if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2023-24.6.0.573%2BFireflyAI.7z --output %DownloadPath%\Photoshop2023-24.6.0.573%2BFireflyAI.7z
+if %errorlevel% == 9 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2022.iso --output %DownloadPath%\PremierePro2022.iso
+if %errorlevel% == 10 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2023-23.4.0.56.iso --output %DownloadPath%\PremierePro2023-23.4.0.56.iso
 if %errorlevel% == 11 goto software
 if %errorlevel% == 12 goto main
 if %errorlevel% == 13 goto exit
@@ -170,14 +172,14 @@ echo.
 
 choice /c:ABCDEFGHIJK
 
-if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output ProcessHacker.7z
-if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output AIDA64.7z
-if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output UninstallTool.7z
-if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output UninstallEdge.7z
-if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output Rufus-4.3.7z
-if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output balenaEtcher-Portable-1.18.11.exe
-if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/BootData.7z --output BootData.7z
-if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output FileShredder.7z
+if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %DownloadPath%\ProcessHacker.7z
+if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output %DownloadPath%\AIDA64.7z
+if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output %DownloadPath%\UninstallTool.7z
+if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output %DownloadPath%\UninstallEdge.7z
+if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output %DownloadPath%\Rufus-4.3.7z
+if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %DownloadPath%\balenaEtcher-Portable-1.18.11.exe
+if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/BootData.7z --output %DownloadPath%\BootData.7z
+if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %DownloadPath%\FileShredder.7z
 if %errorlevel% == 9 goto software
 if %errorlevel% == 10 goto main
 if %errorlevel% == 11 goto exit
@@ -186,4 +188,5 @@ pause
 goto software_b
 
 :exit
+set DownloadsPath=
 cls
