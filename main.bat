@@ -40,9 +40,9 @@ rem ==============================================
 
 :mas
 curl https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS/All-In-One-Version/MAS_AIO-CRC32_9AE8AFBA.cmd --output %Temp%\MAS.cmd
-call MAS.cmd
+call %Temp%\MAS.cmd
 pause
-del MAS.cmd
+del %Temp%\MAS.cmd
 goto main
 
 rem ==============================================
