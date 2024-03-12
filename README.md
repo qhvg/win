@@ -20,6 +20,6 @@ More stuff will be added later.
 
 ## How to run?
 ### Method 1 - Powershell
-`irm https://qhvg.github.io/win/get.ps1 | iex`
+`irm qhvg.github.io/win/get.ps1 | iex`
 ### Method 2 - Batchfile/Traditional
 - Download [main.bat](https://github.com/qhvg/win/blob/main/main.bat) and run
