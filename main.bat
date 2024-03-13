@@ -23,7 +23,7 @@ echo.
 echo [E] Exit
 echo.
 
-choice /c:abcde
+choice /c:ABCDE /n /m "> "
 
 if %errorlevel% == 1 goto mas
 if %errorlevel% == 2 goto software
@@ -59,7 +59,7 @@ echo [C] Return to menu
 echo [D] Exit
 echo.
 
-choice /c:abcd
+choice /c:ABCD /n /m "> "
 
 if %errorlevel% == 1 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
 if %errorlevel% == 2 goto showwinver
@@ -89,7 +89,7 @@ echo [C] Return to menu
 echo [D] Exit
 echo.
 
-choice /c:abcde
+choice /c:ABCDE /n /m "> "
 
 if %errorlevel% == 1 goto software_a
 if %errorlevel% == 2 goto software_b
@@ -125,7 +125,7 @@ echo [L] Return to menu
 echo [M] Exit
 echo.
 
-choice /c:ABCDEFGHIJKLM
+choice /c:ABCDEFGHIJKLM /n /m "> "
 
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro20.7z --output %DownloadPath%\VEGASPro20.7z
 if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro16.7z --output %DownloadPath%\VEGASPro16.7z
@@ -170,7 +170,7 @@ echo [J] Return to menu
 echo [K] Exit
 echo.
 
-choice /c:ABCDEFGHIJK
+choice /c:ABCDEFGHIJK /n /m "> "
 
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %DownloadPath%\ProcessHacker.7z
 if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output %DownloadPath%\AIDA64.7z
