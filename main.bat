@@ -46,6 +46,7 @@ if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
 if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output %DownloadPath%\winaerotweaker.zip
 if %errorlevel% == 5 goto exit
+echo.
 echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
 pause > nul
 goto main
@@ -82,6 +83,7 @@ if %errorlevel% == 1 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\
 if %errorlevel% == 2 goto showwinver
 if %errorlevel% == 3 goto main
 if %errorlevel% == 4 goto exit
+echo.
 echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
 pause > nul
 goto registry
@@ -160,6 +162,7 @@ if %errorlevel% == 10 curl https://dl.malwarewatch.org/software/useful/media/ado
 if %errorlevel% == 11 goto software
 if %errorlevel% == 12 goto main
 if %errorlevel% == 13 goto exit
+echo.
 echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
 pause > nul
 goto software_a
@@ -204,6 +207,7 @@ if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShre
 if %errorlevel% == 9 goto software
 if %errorlevel% == 10 goto main
 if %errorlevel% == 11 goto exit
+echo.
 echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
 pause > nul
 goto software_b
