@@ -1,10 +1,25 @@
 @echo off
 
+rem ==============================================
+rem SETUP & COLOR VARIABLES
+rem ==============================================
+
+set COLOR_RED=[31m>nul
+set COLOR_BRIGHTRED=[1;31m>nul
+
+set COLOR_YELLOW=[33m>nul
+set COLOR_BRIGHTYELLOW=[1;33m>nul
+
+set COLOR_GREEN=[32m>nul
+set COLOR_BRIGHTGREEN=[1;32m>nul
+
+set COLOR_RESET=[0m>nul
+
+echo %COLOR_RESET%
+
 title qhvg/win
 
 set DownloadPath="%userprofile%\Downloads"
-
-rem https://github.com/qhvg/windows
 
 rem ==============================================
 rem MAIN MENU
@@ -188,5 +203,13 @@ pause
 goto software_b
 
 :exit
+echo Clearing variables...
 set DownloadsPath=
+set COLOR_RED=
+set COLOR_BRIGHTRED=
+set COLOR_YELLOW=
+set COLOR_BRIGHTYELLOW=
+set COLOR_GREEN=
+set COLOR_BRIGHTGREEN=
+set COLOR_RESET=
 cls
