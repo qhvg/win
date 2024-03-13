@@ -8,7 +8,7 @@ Batch script I made just in case I would have to setup a new Windows 10 install.
 - Downloadable software from Malwarewatch
   - VEGAS Pro
   - Adobe After Effects, Photoshop, Premiere Pro
-  - Various useful stuff
+  - Useful stuff
 - Various registry fixes
   - FolderType registry fix (improves disk performance)
   - Show Windows version on desktop
