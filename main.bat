@@ -40,6 +40,7 @@ echo.
 
 choice /c:ABCDE /n /m "> "
 
+echo.
 if %errorlevel% == 1 goto mas
 if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
@@ -76,6 +77,7 @@ echo.
 
 choice /c:ABCD /n /m "> "
 
+echo.
 if %errorlevel% == 1 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
 if %errorlevel% == 2 goto showwinver
 if %errorlevel% == 3 goto main
@@ -107,6 +109,7 @@ echo.
 
 choice /c:ABCDE /n /m "> "
 
+echo.
 if %errorlevel% == 1 goto software_a
 if %errorlevel% == 2 goto software_b
 if %errorlevel% == 3 goto main
@@ -143,6 +146,7 @@ echo.
 
 choice /c:ABCDEFGHIJKLM /n /m "> "
 
+echo.
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro20.7z --output %DownloadPath%\VEGASPro20.7z
 if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro16.7z --output %DownloadPath%\VEGASPro16.7z
 if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro21-Suite.7z --output %DownloadPath%\VEGASPro21-Suite.7z
@@ -188,6 +192,7 @@ echo.
 
 choice /c:ABCDEFGHIJK /n /m "> "
 
+echo.
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %DownloadPath%\ProcessHacker.7z
 if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output %DownloadPath%\AIDA64.7z
 if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output %DownloadPath%\UninstallTool.7z
