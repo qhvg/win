@@ -7,8 +7,8 @@ Batch script I made just in case I would have to setup a new Windows 10 install.
 - Microsoft Activation Scripts by [massgrave](https://github.com/massgravel)
 - Downloadable software from Malwarewatch
   - VEGAS Pro
-  - Adobe Products
-  - Useful software
+  - Adobe After Effects, Photoshop, Premiere Pro
+  - Various useful stuff
 - Various registry fixes
   - FolderType registry fix (improves disk performance)
   - Show Windows version on desktop
