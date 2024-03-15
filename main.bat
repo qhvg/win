@@ -4,22 +4,22 @@ rem ==============================================
 rem SETUP & COLOR VARIABLES
 rem ==============================================
 
-set COLOR_RED=[31m>nul
-set COLOR_BRIGHTRED=[1;31m>nul
+set qhvg_win_COLOR_RED=[31m>nul
+set qhvg_win_COLOR_BRIGHTRED=[1;31m>nul
 
-set COLOR_YELLOW=[33m>nul
-set COLOR_BRIGHTYELLOW=[1;33m>nul
+set qhvg_win_COLOR_YELLOW=[33m>nul
+set qhvg_win_COLOR_BRIGHTYELLOW=[1;33m>nul
 
-set COLOR_GREEN=[32m>nul
-set COLOR_BRIGHTGREEN=[1;32m>nul
+set qhvg_win_COLOR_GREEN=[32m>nul
+set qhvg_win_COLOR_BRIGHTGREEN=[1;32m>nul
 
-set COLOR_RESET=[0m>nul
+set qhvg_win_COLOR_RESET=[0m>nul
 
 echo %COLOR_RESET%
 
 title qhvg/win
 
-set DownloadPath="%userprofile%\Downloads"
+set qhvg_win_DownloadPath="%userprofile%\Downloads"
 
 rem ==============================================
 rem MAIN MENU
@@ -44,10 +44,10 @@ echo.
 if %errorlevel% == 1 goto mas
 if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
-if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output %DownloadPath%\winaerotweaker.zip
+if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output %qhvg_win_DownloadPath%\winaerotweaker.zip
 if %errorlevel% == 5 goto exit
 echo.
-echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
+echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
 goto main
 
@@ -84,7 +84,7 @@ if %errorlevel% == 2 goto showwinver
 if %errorlevel% == 3 goto main
 if %errorlevel% == 4 goto exit
 echo.
-echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
+echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
 goto registry
 
@@ -149,21 +149,21 @@ echo.
 choice /c:ABCDEFGHIJKLM /n /m "> "
 
 echo.
-if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro20.7z --output %DownloadPath%\VEGASPro20.7z
-if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro16.7z --output %DownloadPath%\VEGASPro16.7z
-if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro21-Suite.7z --output %DownloadPath%\VEGASPro21-Suite.7z
-if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro8.7z --output %DownloadPath%\VEGASPro8.7z
-if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2022.iso --output %DownloadPath%\AfterEffects2022.iso
-if %errorlevel% == 6 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2023-23.4.0.53.iso --output %DownloadPath%\AfterEffects2023-23.4.0.53.iso
-if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2022.iso --output %DownloadPath%\Photoshop2022.iso
-if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2023-24.6.0.573%2BFireflyAI.7z --output %DownloadPath%\Photoshop2023-24.6.0.573%2BFireflyAI.7z
-if %errorlevel% == 9 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2022.iso --output %DownloadPath%\PremierePro2022.iso
-if %errorlevel% == 10 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2023-23.4.0.56.iso --output %DownloadPath%\PremierePro2023-23.4.0.56.iso
+if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro20.7z --output %qhvg_win_DownloadPath%\VEGASPro20.7z
+if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro16.7z --output %qhvg_win_DownloadPath%\VEGASPro16.7z
+if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro21-Suite.7z --output %qhvg_win_DownloadPath%\VEGASPro21-Suite.7z
+if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/useful/media/vegas/VEGASPro8.7z --output %qhvg_win_DownloadPath%\VEGASPro8.7z
+if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2022.iso --output %qhvg_win_DownloadPath%\AfterEffects2022.iso
+if %errorlevel% == 6 curl https://dl.malwarewatch.org/software/useful/media/adobe/AfterEffects2023-23.4.0.53.iso --output %qhvg_win_DownloadPath%\AfterEffects2023-23.4.0.53.iso
+if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2022.iso --output %qhvg_win_DownloadPath%\Photoshop2022.iso
+if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/useful/media/adobe/Photoshop2023-24.6.0.573%2BFireflyAI.7z --output %qhvg_win_DownloadPath%\Photoshop2023-24.6.0.573%2BFireflyAI.7z
+if %errorlevel% == 9 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2022.iso --output %qhvg_win_DownloadPath%\PremierePro2022.iso
+if %errorlevel% == 10 curl https://dl.malwarewatch.org/software/useful/media/adobe/PremierePro2023-23.4.0.56.iso --output %qhvg_win_DownloadPath%\PremierePro2023-23.4.0.56.iso
 if %errorlevel% == 11 goto software
 if %errorlevel% == 12 goto main
 if %errorlevel% == 13 goto exit
 echo.
-echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
+echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
 goto software_a
 
@@ -196,30 +196,30 @@ echo.
 choice /c:ABCDEFGHIJK /n /m "> "
 
 echo.
-if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %DownloadPath%\ProcessHacker.7z
-if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output %DownloadPath%\AIDA64.7z
-if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output %DownloadPath%\UninstallTool.7z
-if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output %DownloadPath%\UninstallEdge.7z
-if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output %DownloadPath%\Rufus-4.3.7z
-if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %DownloadPath%\balenaEtcher-Portable-1.18.11.exe
-if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/BootData.7z --output %DownloadPath%\BootData.7z
-if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %DownloadPath%\FileShredder.7z
+if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %qhvg_win_DownloadPath%\ProcessHacker.7z
+if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output %qhvg_win_DownloadPath%\AIDA64.7z
+if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output %qhvg_win_DownloadPath%\UninstallTool.7z
+if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output %qhvg_win_DownloadPath%\UninstallEdge.7z
+if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output %qhvg_win_DownloadPath%\Rufus-4.3.7z
+if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %qhvg_win_DownloadPath%\balenaEtcher-Portable-1.18.11.exe
+if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/BootData.7z --output %qhvg_win_DownloadPath%\BootData.7z
+if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %qhvg_win_DownloadPath%\FileShredder.7z
 if %errorlevel% == 9 goto software
 if %errorlevel% == 10 goto main
 if %errorlevel% == 11 goto exit
 echo.
-echo %COLOR_BRIGHTGREEN%Done! Press any key to continue.%COLOR_RESET%
+echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
 goto software_b
 
 :exit
 echo Clearing variables...
-set DownloadsPath=
-set COLOR_RED=
-set COLOR_BRIGHTRED=
-set COLOR_YELLOW=
-set COLOR_BRIGHTYELLOW=
-set COLOR_GREEN=
-set COLOR_BRIGHTGREEN=
-set COLOR_RESET=
+set qhvg_win_DownloadsPath=
+set qhvg_win_COLOR_RED=
+set qhvg_win_COLOR_BRIGHTRED=
+set qhvg_win_COLOR_YELLOW=
+set qhvg_win_COLOR_BRIGHTYELLOW=
+set qhvg_win_COLOR_GREEN=
+set qhvg_win_COLOR_BRIGHTGREEN=
+set qhvg_win_COLOR_RESET=
 cls
