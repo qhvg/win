@@ -90,9 +90,9 @@ goto registry
 
 :showwinver
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "PaintDesktopVersion" /t REG_DWORD /d 1
-echo Done! Restarting explorer shell.
-taskkill /f /im explorer.exe
-call explorer
+echo Done! Restart explorer shell to see changes.
+echo taskkill /f /im explorer.exe && explorer
+pause
 goto registry
 
 rem ==============================================
