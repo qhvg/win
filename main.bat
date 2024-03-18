@@ -187,13 +187,14 @@ echo [F] balenaEtcher x86/64 Portable
 echo 	Bootable Linux USB drives.
 echo [G] BootData
 echo [H] FileShredder
+echo [I] Ventoy
 echo.
-echo [I] Return to Software
-echo [J] Return to menu
-echo [K] Exit
+echo [J] Return to Software
+echo [K] Return to menu
+echo [L] Exit
 echo.
 
-choice /c:ABCDEFGHIJK /n /m "> "
+choice /c:ABCDEFGHIJKL /n /m "> "
 
 echo.
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %qhvg_win_DownloadPath%\ProcessHacker.7z
@@ -204,9 +205,10 @@ if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.
 if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %qhvg_win_DownloadPath%\balenaEtcher-Portable-1.18.11.exe
 if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/BootData.7z --output %qhvg_win_DownloadPath%\BootData.7z
 if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %qhvg_win_DownloadPath%\FileShredder.7z
-if %errorlevel% == 9 goto software
-if %errorlevel% == 10 goto main
-if %errorlevel% == 11 goto exit
+if %errorlevel% == 9 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.77-windows.zip
+if %errorlevel% == 10 goto software
+if %errorlevel% == 11 goto main
+if %errorlevel% == 12 goto exit
 echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
