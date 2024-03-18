@@ -170,14 +170,14 @@ goto software_a
 :software_b
 cls
 echo.
-echo [A] Process Hacker
-echo [B] HWInfo Portable [US]
-echo [C] Uninstall Tool
-echo [D] Uninstall Microsoft Edge
-echo [E] Rufus (4.3)
-echo [F] balenaEtcher x86/64 Portable
-echo [G] FileShredder
-echo [H] Ventoy
+echo [A] Process Hacker [2.39, Portable]
+echo [B] HWInfo [7.72, Portable, US Mirror]
+echo [C] Uninstall Tool [Malwarewatch]
+echo [D] Uninstall Microsoft Edge [Malwarewatch]
+echo [E] Rufus [4.4, Portable]
+echo [F] balenaEtcher [1.18.11, Portable]
+echo [G] FileShredder [-, Setup]
+echo [H] Ventoy [1.0.97, Sourceforge]
 echo.
 echo [I] Return to Software
 echo [J] Return to menu
@@ -187,13 +187,13 @@ echo.
 choice /c:ABCDEFGHIJK /n /m "> "
 
 echo.
-if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %qhvg_win_DownloadPath%\ProcessHacker.7z
+if %errorlevel% == 1 curl https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download --output %qhvg_win_DownloadPath%\ProcessHacker.7z
 if %errorlevel% == 2 curl https://www.hwinfo.com/files/hwi_772.zip --output %qhvg_win_DownloadPath%\hwi_772.zip
 if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output %qhvg_win_DownloadPath%\UninstallTool.7z
 if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output %qhvg_win_DownloadPath%\UninstallEdge.7z
-if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output %qhvg_win_DownloadPath%\Rufus-4.3.7z
+if %errorlevel% == 5 curl https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4p.exe --output %qhvg_win_DownloadPath%\Rufus-4.3.7z
 if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %qhvg_win_DownloadPath%\balenaEtcher-Portable-1.18.11.exe
-if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %qhvg_win_DownloadPath%\FileShredder.7z
+if %errorlevel% == 7 curl https://www.fileshredder.org/files/file_shredder_setup.exe --output %qhvg_win_DownloadPath%\FileShredder.7z
 if %errorlevel% == 8 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.77-windows.zip
 if %errorlevel% == 9 goto software
 if %errorlevel% == 10 goto main
