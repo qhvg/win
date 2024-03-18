@@ -170,12 +170,12 @@ goto software_a
 :software_b
 cls
 echo.
-echo [A] Process Hacker - Elevation to SYSTEM, useful for sethc.exe exploit.
-echo [B] AIDA64 - Diagnostic tool.
+echo [A] Process Hacker
+echo [B] HWInfo Portable [US]
 echo [C] Uninstall Tool
 echo [D] Uninstall Microsoft Edge
-echo [E] Rufus (4.3) - Bootable Windows USB drives.
-echo [F] balenaEtcher x86/64 Portable - Bootable Linux USB drives.
+echo [E] Rufus (4.3)
+echo [F] balenaEtcher x86/64 Portable
 echo [G] FileShredder
 echo [H] Ventoy
 echo.
@@ -188,7 +188,7 @@ choice /c:ABCDEFGHIJK /n /m "> "
 
 echo.
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %qhvg_win_DownloadPath%\ProcessHacker.7z
-if %errorlevel% == 2 curl https://dl.malwarewatch.org/software/useful/AIDA64.7z --output %qhvg_win_DownloadPath%\AIDA64.7z
+if %errorlevel% == 2 curl https://www.hwinfo.com/files/hwi_772.zip --output %qhvg_win_DownloadPath%\hwi_772.zip
 if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallTool.7z --output %qhvg_win_DownloadPath%\UninstallTool.7z
 if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output %qhvg_win_DownloadPath%\UninstallEdge.7z
 if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output %qhvg_win_DownloadPath%\Rufus-4.3.7z
