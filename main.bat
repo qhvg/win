@@ -170,31 +170,21 @@ goto software_a
 :software_b
 cls
 echo.
-echo Software provided by dl.malwarewatch.org
-echo Website owned by Enderman(ch)
-echo Password: mysubsarethebest
-curl https://dl.malwarewatch.org/api/v1/ratelimit_info
-echo.
-echo.
-echo [A] Process Hacker
-echo 	Useful for elevation to NT AUTHORITY\SYSTEM. Can be used for the sethc.exe exploit.
-echo [B] AIDA64
+echo [A] Process Hacker - Elevation to SYSTEM, useful for sethc.exe exploit.
+echo [B] AIDA64 - Diagnostic tool.
 echo [C] Uninstall Tool
-echo [D] Uninstall Edge
-echo [E] Rufus (4.3)
-echo 	Bootable Windows USB drives.
-echo [F] balenaEtcher x86/64 Portable
-echo 	Bootable Linux USB drives.
-echo [G] BootData
-echo [H] FileShredder
-echo [I] Ventoy
+echo [D] Uninstall Microsoft Edge
+echo [E] Rufus (4.3) - Bootable Windows USB drives.
+echo [F] balenaEtcher x86/64 Portable - Bootable Linux USB drives.
+echo [G] FileShredder
+echo [H] Ventoy
 echo.
-echo [J] Return to Software
-echo [K] Return to menu
-echo [L] Exit
+echo [I] Return to Software
+echo [J] Return to menu
+echo [K] Exit
 echo.
 
-choice /c:ABCDEFGHIJKL /n /m "> "
+choice /c:ABCDEFGHIJK /n /m "> "
 
 echo.
 if %errorlevel% == 1 curl https://dl.malwarewatch.org/software/advanced/ProcessHacker.7z --output %qhvg_win_DownloadPath%\ProcessHacker.7z
@@ -203,12 +193,11 @@ if %errorlevel% == 3 curl https://dl.malwarewatch.org/software/useful/UninstallT
 if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/UninstallEdge.7z --output %qhvg_win_DownloadPath%\UninstallEdge.7z
 if %errorlevel% == 5 curl https://dl.malwarewatch.org/software/advanced/Rufus-4.3.7z --output %qhvg_win_DownloadPath%\Rufus-4.3.7z
 if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %qhvg_win_DownloadPath%\balenaEtcher-Portable-1.18.11.exe
-if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/BootData.7z --output %qhvg_win_DownloadPath%\BootData.7z
-if %errorlevel% == 8 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %qhvg_win_DownloadPath%\FileShredder.7z
-if %errorlevel% == 9 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.77-windows.zip
-if %errorlevel% == 10 goto software
-if %errorlevel% == 11 goto main
-if %errorlevel% == 12 goto exit
+if %errorlevel% == 7 curl https://dl.malwarewatch.org/software/advanced/FileShredder.7z --output %qhvg_win_DownloadPath%\FileShredder.7z
+if %errorlevel% == 8 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.77-windows.zip
+if %errorlevel% == 9 goto software
+if %errorlevel% == 10 goto main
+if %errorlevel% == 11 goto exit
 echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
