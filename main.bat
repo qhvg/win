@@ -32,7 +32,7 @@ cls
 echo.
 echo [A] Microsoft Activation Scripts
 echo [B] Software
-echo [C] Registry Fixes/Hacks
+echo [C] Registry
 echo [D] Download Winaero Tweaker
 echo.
 echo [E] Exit
@@ -63,7 +63,7 @@ del %Temp%\MAS.cmd
 goto main
 
 rem ==============================================
-rem REGISTRY HACKS
+rem REGISTRY
 rem ==============================================
 
 :registry
@@ -96,7 +96,7 @@ pause
 goto registry
 
 rem ==============================================
-rem WINDOWS SOFTWARE
+rem SOFTWARE
 rem ==============================================
 
 :software
@@ -118,7 +118,7 @@ if %errorlevel% == 3 goto main
 if %errorlevel% == 4 goto exit
 
 rem ==============================================
-rem WINDOWS SOFTWARE SUBCATEGORIES
+rem SOFTWARE SUBCATEGORIES
 rem ==============================================
 
 :software_a
@@ -202,6 +202,10 @@ echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
 goto software_b
+
+rem ==============================================
+rem END
+rem ==============================================
 
 :exit
 echo Clearing variables...
