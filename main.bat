@@ -34,18 +34,20 @@ echo [A] Microsoft Activation Scripts
 echo [B] Software
 echo [C] Registry
 echo [D] Download Winaero Tweaker
+echo [E] Download Sophia Script for Windows 10 [5.18.2]
 echo.
-echo [E] Exit
+echo [F] Exit
 echo.
 
-choice /c:ABCDE /n /m "> "
+choice /c:ABCDEF /n /m "> "
 
 echo.
 if %errorlevel% == 1 goto mas
 if %errorlevel% == 2 goto software
 if %errorlevel% == 3 goto registry
-if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip --output %qhvg_win_DownloadPath%\winaerotweaker.zip
-if %errorlevel% == 5 goto exit
+if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip -o %qhvg_win_DownloadPath%\winaerotweaker.zip
+if %errorlevel% == 5 curl https://github.com/farag2/Sophia-Script-for-Windows/releases/download/6.6.2/Sophia.Script.for.Windows.10.v5.18.2.zip -o %qhvg_win_DownloadPath%\Sophia.Script.for.Windows.10.v5.18.2.zip
+if %errorlevel% == 6 goto exit
 echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
