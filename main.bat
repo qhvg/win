@@ -196,7 +196,7 @@ if %errorlevel% == 4 curl https://dl.malwarewatch.org/software/features/Uninstal
 if %errorlevel% == 5 curl https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4p.exe --output %qhvg_win_DownloadPath%\Rufus-4.3.7z
 if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %qhvg_win_DownloadPath%\balenaEtcher-Portable-1.18.11.exe
 if %errorlevel% == 7 curl https://www.fileshredder.org/files/file_shredder_setup.exe --output %qhvg_win_DownloadPath%\FileShredder.7z
-if %errorlevel% == 8 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.77-windows.zip
+if %errorlevel% == 8 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.97-windows.zip
 if %errorlevel% == 9 goto software
 if %errorlevel% == 10 goto main
 if %errorlevel% == 11 goto exit
