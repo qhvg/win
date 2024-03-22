@@ -180,13 +180,15 @@ echo [E] Rufus [4.4, Portable]
 echo [F] balenaEtcher [1.18.11, Portable]
 echo [G] FileShredder [-, Setup]
 echo [H] Ventoy [1.0.97, Sourceforge]
+echo [I] CrystalDiskInfo [9.2.3, Sourceforge, Standard Ver.]
+echo [J] CrystalDiskMark [8.0.5, Sourceforge, Standard Ver.]
 echo.
-echo [I] Return to Software
-echo [J] Return to menu
-echo [K] Exit
+echo [K] Return to Software
+echo [L] Return to menu
+echo [M] Exit
 echo.
 
-choice /c:ABCDEFGHIJK /n /m "> "
+choice /c:ABCDEFGHIJKLM /n /m "> "
 
 echo.
 if %errorlevel% == 1 curl https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download --output %qhvg_win_DownloadPath%\ProcessHacker.7z
@@ -197,9 +199,11 @@ if %errorlevel% == 5 curl https://github.com/pbatard/rufus/releases/download/v4.
 if %errorlevel% == 6 curl https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe --output %qhvg_win_DownloadPath%\balenaEtcher-Portable-1.18.11.exe
 if %errorlevel% == 7 curl https://www.fileshredder.org/files/file_shredder_setup.exe --output %qhvg_win_DownloadPath%\FileShredder.7z
 if %errorlevel% == 8 curl -L https://sourceforge.net/projects/ventoy/files/v1.0.97/ventoy-1.0.97-windows.zip/download -o %qhvg_win_DownloadPath%\ventoy-1.0.97-windows.zip
-if %errorlevel% == 9 goto software
-if %errorlevel% == 10 goto main
-if %errorlevel% == 11 goto exit
+if %errorlevel% == 9 curl -L https://altushost-swe.dl.sourceforge.net/project/crystaldiskinfo/9.2.3/CrystalDiskInfo9_2_3.exe -o %qhvg_win_DownloadPath%\CrystalDiskInfo9_2_3.exe
+if %errorlevel% == 10 curl -L https://netcologne.dl.sourceforge.net/project/crystaldiskmark/8.0.5/CrystalDiskMark8_0_5.exe -o %qhvg_win_DownloadPath%\CrystalDiskMark8_0_5.exe
+if %errorlevel% == 11 goto software
+if %errorlevel% == 12 goto main
+if %errorlevel% == 13 goto exit
 echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
