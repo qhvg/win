@@ -30,36 +30,25 @@ mode con: cols=96 lines=36
 :main
 cls
 echo.
-echo [A] Microsoft Activation Scripts
-echo [B] Software
-echo [C] Registry
-echo [D] Download Winaero Tweaker
-echo [E] Download Sophia Script for Windows 10 [5.18.2]
+echo [A] Software
+echo [B] Registry
+echo [C] Download Winaero Tweaker
+echo [D] Download Sophia Script for Windows 10 [5.18.2]
 echo.
-echo [F] Exit
+echo [E] Exit
 echo.
 
-choice /c:ABCDEF /n /m "> "
+choice /c:ABCDE /n /m "> "
 
 echo.
-if %errorlevel% == 1 goto mas
-if %errorlevel% == 2 goto software
-if %errorlevel% == 3 goto registry
-if %errorlevel% == 4 curl https://winaerotweaker.com/download/winaerotweaker.zip -o %qhvg_win_DownloadPath%\winaerotweaker.zip
-if %errorlevel% == 5 curl https://github.com/farag2/Sophia-Script-for-Windows/releases/download/6.6.2/Sophia.Script.for.Windows.10.v5.18.2.zip -o %qhvg_win_DownloadPath%\Sophia.Script.for.Windows.10.v5.18.2.zip
-if %errorlevel% == 6 goto exit
+if %errorlevel% == 1 goto software
+if %errorlevel% == 2 goto registry
+if %errorlevel% == 3 curl https://winaerotweaker.com/download/winaerotweaker.zip -o %qhvg_win_DownloadPath%\winaerotweaker.zip
+if %errorlevel% == 4 curl https://github.com/farag2/Sophia-Script-for-Windows/releases/download/6.6.2/Sophia.Script.for.Windows.10.v5.18.2.zip -o %qhvg_win_DownloadPath%\Sophia.Script.for.Windows.10.v5.18.2.zip
+if %errorlevel% == 5 goto exit
 echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
-goto main
-
-rem ==============================================
-rem MICROSOFT ACTIVATION SCRIPTS
-rem ==============================================
-
-:mas
-powershell irm massgrave.dev/get | iex
-pause
 goto main
 
 rem ==============================================
@@ -77,7 +66,7 @@ echo [D] Return to menu
 echo [E] Exit
 echo.
 
-choice /c:ABCD /n /m "> "
+choice /c:ABCDE /n /m "> "
 
 echo.
 if %errorlevel% == 1 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
