@@ -60,7 +60,7 @@ rem ==============================================
 :mas
 curl https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS/All-In-One-Version/MAS_AIO-CRC32_9AE8AFBA.cmd --output %Temp%\MAS.cmd
 call %Temp%\MAS.cmd
-echo If finished, press any key to continue.
+pause
 del %Temp%\MAS.cmd
 goto main
 
