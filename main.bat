@@ -72,10 +72,11 @@ rem ==============================================
 cls
 echo.
 echo [A] FolderType Registry Fix - Changes FolderType to "NotSpecified", improves disk performance.
-echo [B] Show Windows version on Desktop (will restart Explorer shell)
+echo [B] Disable Bing Search (shell restart required)
+echo [C] Show Windows version on Desktop (shell restart required)
 echo.
-echo [C] Return to menu
-echo [D] Exit
+echo [D] Return to menu
+echo [E] Exit
 echo.
 
 choice /c:ABCD /n /m "> "
@@ -83,17 +84,25 @@ choice /c:ABCD /n /m "> "
 echo.
 if %errorlevel% == 1 reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" /v "FolderType" /t REG_SZ /d "NotSpecified"
 if %errorlevel% == 2 goto showwinver
-if %errorlevel% == 3 goto main
-if %errorlevel% == 4 goto exit
+if %errorlevel% == 3 goto disablebing
+if %errorlevel% == 4 goto main
+if %errorlevel% == 5 goto exit
 echo.
 echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Press any key to continue.%qhvg_win_COLOR_RESET%
 pause > nul
 goto registry
 
+:disablebing
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 0
+echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Restart explorer shell to see changes.%qhvg_win_COLOR_BRIGHTGREEN%
+echo %qhvg_win_COLOR_BRIGHTGREEN%taskkill /f /im explorer.exe && explorer%qhvg_win_COLOR_BRIGHTGREEN%
+pause
+goto registry
+
 :showwinver
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "PaintDesktopVersion" /t REG_DWORD /d 1
-echo Done! Restart explorer shell to see changes.
-echo taskkill /f /im explorer.exe && explorer
+echo %qhvg_win_COLOR_BRIGHTGREEN%Done! Restart explorer shell to see changes.%qhvg_win_COLOR_BRIGHTGREEN%
+echo %qhvg_win_COLOR_BRIGHTGREEN%taskkill /f /im explorer.exe && explorer%qhvg_win_COLOR_BRIGHTGREEN%
 pause
 goto registry
 
