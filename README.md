@@ -11,6 +11,7 @@ Batch script I made just in case I would have to setup a new Windows 10 install.
   - Useful stuff
 - Various registry fixes
   - FolderType registry fix (improves disk performance)
+  - Disable Bing Search
   - Show Windows version on desktop
 - Download Winaero Tweaker using curl
 
